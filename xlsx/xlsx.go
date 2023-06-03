@@ -80,6 +80,7 @@ func Open(filename string) (grate.Source, error) {
 	base := filepath.Base(d.primaryDoc)
 	sub := strings.TrimSuffix(d.primaryDoc, base)
 	relfn := filepath.Join(sub, "_rels", base+".rels")
+	relfn = strings.ReplaceAll(relfn,"\\","/")
 	dec, c, err = d.openXML(relfn)
 	if err != nil {
 		return nil, err
@@ -91,6 +92,7 @@ func Open(filename string) (grate.Source, error) {
 	}
 
 	// parse the workbook structure
+	d.primaryDoc = strings.ReplaceAll(d.primaryDoc,"\\","/")
 	dec, c, err = d.openXML(d.primaryDoc)
 	if err != nil {
 		return nil, err
@@ -104,6 +106,7 @@ func Open(filename string) (grate.Source, error) {
 	styn := d.rels["http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles"]
 	for _, sst := range styn {
 		// parse the shared string table
+		sst = strings.ReplaceAll(sst,"\\","/")
 		dec, c, err = d.openXML(sst)
 		if err != nil {
 			return nil, err
@@ -118,6 +121,7 @@ func Open(filename string) (grate.Source, error) {
 	ssn := d.rels["http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings"]
 	for _, sst := range ssn {
 		// parse the shared string table
+		sst = strings.ReplaceAll(sst,"\\","/")
 		dec, c, err = d.openXML(sst)
 		if err != nil {
 			return nil, err

@@ -34,6 +34,7 @@ func (s *Sheet) parseSheet() error {
 	base := filepath.Base(s.docname)
 	sub := strings.TrimSuffix(s.docname, base)
 	relsname := filepath.Join(sub, "_rels", base+".rels")
+	relsname = strings.ReplaceAll(relsname,"\\","/")
 	dec, clo, err := s.d.openXML(relsname)
 	if err == nil {
 		// rels might not exist for every sheet
@@ -48,7 +49,7 @@ func (s *Sheet) parseSheet() error {
 		}
 		clo.Close()
 	}
-
+	s.docname = strings.ReplaceAll(s.docname,"\\","/")
 	dec, clo, err = s.d.openXML(s.docname)
 	if err != nil {
 		return err
