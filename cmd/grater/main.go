@@ -7,10 +7,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/pbnjay/grate"
-	_ "github.com/pbnjay/grate/simple" // tsv and csv support
-	_ "github.com/pbnjay/grate/xls"
-	_ "github.com/pbnjay/grate/xlsx"
+	"github.com/ShiHuang-ESec/grate"
+	_ "github.com/ShiHuang-ESec/grate/simple" // tsv and csv support
+	_ "github.com/ShiHuang-ESec/grate/xls"
+	_ "github.com/ShiHuang-ESec/grate/xlsx"
 )
 
 func main() {

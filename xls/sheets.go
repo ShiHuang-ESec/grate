@@ -7,8 +7,8 @@ import (
 	"math"
 	"unicode/utf16"
 
-	"github.com/pbnjay/grate"
-	"github.com/pbnjay/grate/commonxl"
+	"github.com/ShiHuang-ESec/grate"
+	"github.com/ShiHuang-ESec/grate/commonxl"
 )
 
 // List (visible) sheet names from the workbook.

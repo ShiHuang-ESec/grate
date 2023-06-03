@@ -15,7 +15,7 @@ import (
 	"log"
 	"unicode/utf16"
 
-	"github.com/pbnjay/grate"
+	"github.com/ShiHuang-ESec/grate"
 )
 
 const fullAssertions = true

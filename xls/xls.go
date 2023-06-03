@@ -14,10 +14,10 @@ import (
 	"log"
 	"sync"
 
-	"github.com/pbnjay/grate"
-	"github.com/pbnjay/grate/commonxl"
-	"github.com/pbnjay/grate/xls/cfb"
-	"github.com/pbnjay/grate/xls/crypto"
+	"github.com/ShiHuang-ESec/grate"
+	"github.com/ShiHuang-ESec/grate/commonxl"
+	"github.com/ShiHuang-ESec/grate/xls/cfb"
+	"github.com/ShiHuang-ESec/grate/xls/crypto"
 )
 
 var _ = grate.Register("xls", 1, Open)

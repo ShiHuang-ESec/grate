@@ -20,10 +20,10 @@ import (
     "os"
     "strings"
 
-    "github.com/pbnjay/grate"
-    _ "github.com/pbnjay/grate/simple" // tsv and csv support
-    _ "github.com/pbnjay/grate/xls"
-    _ "github.com/pbnjay/grate/xlsx"
+    "github.com/ShiHuang-ESec/grate"
+    _ "github.com/ShiHuang-ESec/grate/simple" // tsv and csv support
+    _ "github.com/ShiHuang-ESec/grate/xls"
+    _ "github.com/ShiHuang-ESec/grate/xlsx"
 )
 
 func main() {
@@ -42,4 +42,4 @@ func main() {
 
 # License
 
-All source code is licensed under the [MIT License](https://raw.github.com/pbnjay/grate/master/LICENSE).
+All source code is licensed under the [MIT License](https://raw.github.com/ShiHuang-ESec/grate/master/LICENSE).
