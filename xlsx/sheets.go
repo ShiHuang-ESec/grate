@@ -121,6 +121,12 @@ func (s *Sheet) parseSheet() error {
 					//minCol, minRow := refToIndexes(dims[0])
 					maxCol, maxRow = refToIndexes(dims[1])
 				}
+				if maxRow > 1000000 {
+					maxRow = 100
+				}
+				if maxCol > 10000 {
+					maxCol = 26
+				}
 				s.wrapped.Resize(maxRow, maxCol)
 				//log.Println("DIMENSION:", s.minRow, s.minCol, ">", s.maxRow, s.maxCol)
 			case "row":
